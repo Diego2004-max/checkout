@@ -6,9 +6,9 @@ class CheckoutScreen extends StatefulWidget {
   final List<Product> cart;
 
   const CheckoutScreen({
-    super.key,
+    Key? key,
     required this.cart,
-  });
+  }) : super(key: key);
 
   @override
   State<CheckoutScreen> createState() => _CheckoutScreenState();
