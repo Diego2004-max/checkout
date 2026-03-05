@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'core/database_helper.dart';
+import 'screens/product_list_screen.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await DatabaseHelper().database;
+void main() {
   runApp(const MyApp());
 }
 
@@ -14,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(child: Text("Database Ready")),
-      ),
+      home: ProductListScreen(),
     );
   }
 }
